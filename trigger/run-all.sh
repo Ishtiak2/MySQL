@@ -8,7 +8,7 @@ MYSQL="mysql"
 
 USER="root"
 case "${1:-}" in
-  --no-pw) ARGS=(--protocol=local -u "$USER") ;;
+  --no-pw) ARGS=(-u "$USER") ;;
   *)       ARGS=(-u "$USER" -p) ;;
 esac
 
